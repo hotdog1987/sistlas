@@ -1,1 +1,5 @@
-This is the project repo for http://sistlas.heroku.com, website of the family name Sistlas. Copyright @Srikar Shastry 2017.
+This is the project repo for https://sistlas.herokuapp.com, website of the family Sistlas. 
+
+Copyright @Srikar Shastry 2017.
+
+All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
