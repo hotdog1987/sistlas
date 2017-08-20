@@ -1,0 +1,25 @@
+<div class="child-leafs" ng-repeat="child in leafsCtrl.leafs.children" style="padding:0">
+    <div class="child-leafs" ng-if="child.grandChildren.length === 0" style="width:100%;height:100px"></div>
+
+    <div class="child-leafs" ng-repeat="grandChild in child.grandChildren" ng-if="child.grandChildren.length > 1" 
+    style="width:40%;padding:0;margin:0 1px;position:relative">
+        <div class="leaf-tab parent-leaf" style="overflow:inherit">
+            <svg width="10" height="15" style="left:50%;top:0">
+                <line y2="10" x2="0" y1="0" x1="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" stroke="#000000" fill="none"></line>
+            </svg>
+            <a class="col-sm-12 col-xs-12" style="margin: 10px 0">
+                <p ng-bind="grandChild.name"></p>
+            </a>
+        </div>
+    </div>
+    <div class="child-leafs" ng-repeat="grandChild in child.grandChildren" ng-if="child.grandChildren.length === 1" style="width:100%;position:relative">
+        <div class="leaf-tab parent-leaf" style="overflow:inherit">
+            <svg width="10" height="15" style="left:50%;top:0">
+                <line y2="10" x2="0" y1="0" x1="0" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" stroke="#000000" fill="none"></line>
+            </svg>
+            <a class="col-sm-12 col-xs-12">
+                <p ng-bind="grandChild.name"></p>
+            </a>
+        </div>
+    </div>
+</div>

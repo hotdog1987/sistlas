@@ -1,0 +1,14 @@
+<div ng-if="honor.loading" class="loading-dimensions">
+    <div class="whirly-loader">
+        Loading…
+    </div>
+</div>
+<div ng-if="!honor.loading">
+    <div>
+        <h2 class="center" ng-bind="honor.honor.title"></h2>
+        <div ng-bind-html="honor.honor.para01 | htmlFilter"></div>
+        <div ng-bind-html="honor.honor.para02 | htmlFilter"></div>
+        <div ng-bind-html="honor.honor.para03 | htmlFilter"></div>
+        <div ng-bind-html="honor.honor.para04 | htmlFilter"></div>
+    </div>
+</div>

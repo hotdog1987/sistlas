@@ -1,0 +1,16 @@
+<div ng-if="culture.loading" class="loading-dimensions">
+    <div class="whirly-loader">
+        Loading…
+    </div>
+</div>
+<div ng-if="!culture.loading">
+    <div>
+    <h2 class="center" ng-bind="culture.culture.title"></h2>
+    <div ng-bind-html="culture.culture.para01 | htmlFilter"></div>
+    <div ng-bind-html="culture.culture.para02 | htmlFilter"></div>
+    <div ng-bind-html="culture.culture.parap03 | htmlFilter"></div>
+    <div ng-bind-html="culture.culture.para04 | htmlFilter"></div>
+    <div ng-bind-html="culture.culture.para05 | htmlFilter"></div>
+    <div ng-bind-html="culture.culture.para06 | htmlFilter"></div>
+</div>
+</div>

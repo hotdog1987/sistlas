@@ -1,0 +1,27 @@
+<div ng-if="leafsCtrl.loading" class="loading-dimensions">
+    <div class="whirly-loader">
+        Loading…
+    </div>
+</div>
+<section ng-if="!leafsCtrl.loading">
+    <header></header>
+    <article class="col-sm-12 card-view">
+        <section class="card-view-repeat">
+            <header></header>
+            <article>
+                <div class="row">
+                    <div ui-view="treeParent" style="position:relative;"></div>
+                </div>
+                <div class="row">
+                    <div ui-view="treeChild" class="treeChild"></div>
+                </div>
+                <div class="row">
+                    <div ui-view="treeGrandChild" class="treeChild"></div>
+                </div>
+            </article>
+            <footer></footer>
+        </section>
+
+    </article>
+    <footer></footer>
+</section>

@@ -1,0 +1,463 @@
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100% !important;
+  }
+}
+.overflow {
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../font/Roboto-Regular.ttf);
+}
+h2 {
+  font-family: Roboto;
+}
+body {
+  background: #efefef;
+  margin: 0;
+  padding-top: 270px;
+  font-family: Roboto;
+}
+.navAnimate,
+.header .stickyNavClass .container .minOpac,
+.header .stickyNavClass .container .maxOpac,
+.header .stickyNavClass .minSize,
+.header .stickyNavClass .maxSize,
+.min,
+.max,
+.minNav,
+.maxNav {
+  -webkit-transition: all 1500ms ease;
+  -moz-transition: all 1500ms ease;
+  -o-transition: all 1500ms ease;
+  transition: all 1500ms ease;
+}
+.header {
+  top: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  height: 200px;
+  background-color: #ffad33;
+}
+.header .stickyNavClass {
+  height: 100%;
+}
+.header .stickyNavClass .container {
+  height: 100%;
+  background-image: url('../images/logo/logo.png');
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 10px;
+}
+.header .stickyNavClass .container div {
+  font-size: 16px;
+  padding: 70px 5px;
+  text-transform: uppercase;
+  opacity: 1;
+  overflow: hidden;
+}
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .container div {
+    padding: 20px 5px;
+  }
+}
+.header .stickyNavClass .container .minOpac {
+  opacity: 0.65;
+  padding: 15px 5px;
+}
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .container .minOpac {
+    opacity: 0;
+    height: 0;
+  }
+}
+.header .stickyNavClass .container .maxOpac {
+  opacity: 1;
+  padding: 70px 5px;
+}
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .container .maxOpac {
+    padding: 20px 5px;
+    height: 195px;
+  }
+}
+.header .stickyNavClass .minSize {
+  background-size: 10%;
+  background-position: 0;
+}
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .minSize {
+    background-size: 20%;
+    background-position: 0;
+  }
+}
+.header .stickyNavClass .maxSize {
+  background-size: 20%;
+  background-position: 0 10px;
+}
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .maxSize {
+    background-size: 20%;
+    background-position: 10%;
+  }
+}
+.main-nav {
+  position: fixed;
+  background: #efefef;
+  height: 48px;
+  z-index: 150;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  top: 200px;
+}
+.mainView {
+  height: 900px;
+  background-color: #efefef;
+}
+.min {
+  height: 80px;
+}
+.max {
+  height: 200px;
+}
+.minNav {
+  top: 80px;
+}
+.maxNav {
+  top: 200px;
+}
+/* NAVIGATION CSS */
+/******************/
+input[type=radio] {
+  display: none;
+}
+.cont {
+  width: inherit;
+  margin: 0 auto;
+  background: #efefef;
+  position: fixed;
+  height: 48px;
+}
+.cont label {
+  width: 20%;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #333333;
+  float: left;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .cont label {
+    line-height: inherit;
+  }
+}
+.cont label span {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: all 0.6s;
+}
+.cont input[type=radio]:checked + label {
+  color: #ffad33;
+  cursor: default;
+}
+.cont input[type=radio]:checked ~ div {
+  width: auto;
+}
+.cont input[type=radio]#f:checked ~ .border {
+  left: 0;
+  right: 80%;
+}
+.cont .border {
+  position: absolute;
+  height: 2px;
+  background-color: #ffad33;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  -webkit-transition: left 0.5s ease-out, right 0.4s ease;
+  -moz-transition: left 0.5s ease-out, right 0.4s ease;
+  -o-transition: left 0.5s ease-out, right 0.4s ease;
+  transition: left 0.5s ease-out, right 0.4s ease;
+}
+label[for="f"] > span {
+  left: 0;
+}
+label[for="s"] > span {
+  left: 20%;
+}
+label[for="t"] > span {
+  left: 40%;
+}
+label[for="fo"] > span {
+  left: 60%;
+}
+label[for="fi"] > span {
+  left: 80%;
+}
+label[for="f"]:hover > span {
+  width: 20%;
+}
+label[for="s"]:hover > span {
+  width: 20%;
+}
+label[for="t"]:hover > span {
+  width: 20%;
+}
+label[for="fo"]:hover > span {
+  width: 20%;
+}
+label[for="fi"]:hover > span {
+  width: 20%;
+}
+.cont input[type=radio]#f:checked ~ label[for="f"]:hover > span,
+.cont input[type=radio]#s:checked ~ label[for="s"]:hover > span,
+.cont input[type=radio]#t:checked ~ label[for="t"]:hover > span,
+.cont input[type=radio]#fo:checked ~ label[for="fo"]:hover > span,
+.cont input[type=radio]#fi:checked ~ label[for="fi"]:hover > span {
+  width: 0;
+}
+.cont input[type=radio]#s:checked ~ .border {
+  left: 20%;
+  right: 60%;
+}
+.cont input[type=radio]#t:checked ~ .border {
+  left: 40%;
+  right: 40%;
+}
+.cont input[type=radio]#fo:checked ~ .border {
+  left: 60%;
+  right: 20%;
+}
+.cont input[type=radio]#fi:checked ~ .border {
+  left: 80%;
+  right: 0;
+}
+/* CSS FOR HISTORY PAGE */
+.center {
+  text-align: center;
+}
+.backgroundImgs,
+.sistlasTree1,
+.sistlasTree2 {
+  height: 1000px;
+  background-size: 50%;
+}
+.sistlasTree1 {
+  background-image: url('../images/SisTree-1.gif');
+  background-repeat: no-repeat;
+}
+.sistlasTree2 {
+  background-image: url('../images/SisTree-2.gif');
+  background-repeat: no-repeat;
+}
+.para {
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+}
+.card-view .card-view-repeat {
+  margin-bottom: 10px;
+}
+.card-view .card-view-repeat a {
+  color: #333333;
+  padding: 0;
+  border: 1px solid #333333;
+  position: relative;
+  border-radius: 10px;
+  opacity: 0.85;
+  margin: 10px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.card-view .card-view-repeat a:hover {
+  text-decoration: none;
+  color: #ffad33;
+  border: 1px solid #ffad33;
+  -webkit-box-shadow: -2px 2px 9px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -2px 2px 9px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: -2px 2px 9px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  opacity: 1;
+}
+.card-view .card-view-repeat a p {
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+}
+.card-view .card-view-repeat {
+  /*&:nth-child(odd){
+      a{
+        p{
+          bottom: -45px;
+        }
+      }
+    }
+    &:nth-child(even){
+      a{
+        p{
+          bottom: -25px;
+        }
+      }
+    }*/
+}
+.card-view .card-view-repeat article {
+  overflow: hidden;
+  position: relative;
+}
+.card-view .card-view-repeat .leaf-tab {
+  /*width: 25%;*/
+  overflow: hidden;
+  margin: auto;
+  float: none;
+}
+.card-view .card-view-repeat .parent-leaf {
+  position: static !important;
+}
+.card-view .card-view-repeat .parent-leaf svg {
+  position: absolute;
+  top: 35%;
+}
+@media only screen and (max-width: 767px) {
+  .card-view .card-view-repeat .parent-leaf svg {
+    left: 20%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-view .card-view-repeat .parent-leaf svg {
+    left: 23%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1128px) {
+  .card-view .card-view-repeat .parent-leaf svg {
+    left: 25%;
+  }
+}
+@media only screen and (min-width: 1129px) and (max-width: 1200px) {
+  .card-view .card-view-repeat .parent-leaf svg {
+    left: 23%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-view .card-view-repeat .parent-leaf svg {
+    left: 25%;
+  }
+}
+.card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph;
+  /*IE*/
+  filter: fliph;
+  /*IE*/
+  left: 68%;
+}
+@media only screen and (max-width: 767px) {
+  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+    left: 66%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+    left: 66%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1128px) {
+  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+    left: 66%;
+  }
+}
+@media only screen and (min-width: 1129px) and (max-width: 1200px) {
+  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+    left: 68%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+    left: 68%;
+  }
+}
+.card-view .card-view-repeat .treeChild {
+  position: relative;
+  border-top: 1px solid;
+}
+@media only screen and (max-width: 767px) {
+  .card-view .card-view-repeat .treeChild {
+    margin-top: 5px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .card-view .card-view-repeat .treeChild {
+    margin-top: 3px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1128px) {
+  .card-view .card-view-repeat .treeChild {
+    margin-top: 16px;
+  }
+}
+@media only screen and (min-width: 1129px) and (max-width: 1200px) {
+  .card-view .card-view-repeat .treeChild {
+    margin-top: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card-view .card-view-repeat .treeChild {
+    margin-top: 16px;
+  }
+}
+.card-view .card-view-repeat .treeChild .child-leafs {
+  width: 20%;
+  float: left;
+  padding: 0 30px;
+}
+.korean {
+  display: inline-block;
+  padding: 0 25px;
+}
+.loading-dimensions {
+  width: 0%;
+  margin: auto;
+  height: 500px;
+  margin-top: 200px;
+}
+.main {
+  padding-bottom: 40px;
+}
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: white;
+  opacity: 0.9;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.footer section p {
+  margin-top: 10px;
+  font-size: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .card-view {
+    overflow-x: scroll;
+    width: 700px;
+  }
+}

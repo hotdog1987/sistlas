@@ -1,0 +1,8 @@
+.c9/
+.vscode/
+
+node_modules/
+mongod-start
+public/bower
+*.log
+*.lock
