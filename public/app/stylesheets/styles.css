@@ -1,20 +1,6 @@
-@media only screen and (max-width: 767px) {
-  .container {
-    width: 100% !important;
-  }
-}
-.overflow {
-  overflow: hidden;
-}
-* {
-  box-sizing: border-box;
-}
 @font-face {
   font-family: Roboto;
-  src: url(../font/Roboto-Regular.ttf);
-}
-h2 {
-  font-family: Roboto;
+  src: url('../font/Roboto-Regular.ttf');
 }
 body {
   background: #efefef;
@@ -22,11 +8,14 @@ body {
   padding-top: 270px;
   font-family: Roboto;
 }
+
+.overflow {
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
 .navAnimate,
-.header .stickyNavClass .container .minOpac,
-.header .stickyNavClass .container .maxOpac,
-.header .stickyNavClass .minSize,
-.header .stickyNavClass .maxSize,
 .min,
 .max,
 .minNav,
@@ -36,77 +25,7 @@ body {
   -o-transition: all 1500ms ease;
   transition: all 1500ms ease;
 }
-.header {
-  top: 0;
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  height: 200px;
-  background-color: #ffad33;
-}
-.header .stickyNavClass {
-  height: 100%;
-}
-.header .stickyNavClass .container {
-  height: 100%;
-  background-image: url('../images/logo/logo.png');
-  background-repeat: no-repeat;
-  background-size: 20%;
-  background-position: 10px;
-}
-.header .stickyNavClass .container div {
-  font-size: 16px;
-  padding: 70px 5px;
-  text-transform: uppercase;
-  opacity: 1;
-  overflow: hidden;
-}
-@media only screen and (max-width: 767px) {
-  .header .stickyNavClass .container div {
-    padding: 20px 5px;
-  }
-}
-.header .stickyNavClass .container .minOpac {
-  opacity: 0.65;
-  padding: 15px 5px;
-}
-@media only screen and (max-width: 767px) {
-  .header .stickyNavClass .container .minOpac {
-    opacity: 0;
-    height: 0;
-  }
-}
-.header .stickyNavClass .container .maxOpac {
-  opacity: 1;
-  padding: 70px 5px;
-}
-@media only screen and (max-width: 767px) {
-  .header .stickyNavClass .container .maxOpac {
-    padding: 20px 5px;
-    height: 195px;
-  }
-}
-.header .stickyNavClass .minSize {
-  background-size: 10%;
-  background-position: 0;
-}
-@media only screen and (max-width: 767px) {
-  .header .stickyNavClass .minSize {
-    background-size: 20%;
-    background-position: 0;
-  }
-}
-.header .stickyNavClass .maxSize {
-  background-size: 20%;
-  background-position: 0 10px;
-}
-@media only screen and (max-width: 767px) {
-  .header .stickyNavClass .maxSize {
-    background-size: 20%;
-    background-position: 10%;
-  }
-}
+
 .main-nav {
   position: fixed;
   background: #efefef;

@@ -1,0 +1,60 @@
+@media only screen and (max-width: 1600px) {
+    .container {
+        width: 1100px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .container {
+        width: 968px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 968px) {
+    .container {
+        width: 767px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .container .banner {
+    padding: 20px 5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .container .minOpac {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .container .maxOpac {
+    padding: 20px 5px;
+    height: 195px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .minSize {
+    background-size: 20%;
+    background-position: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header .stickyNavClass .maxSize {
+    background-size: 20%;
+    background-position: 10%;
+  }
+}

@@ -33,7 +33,7 @@
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use('/bower',express.static(path.join(__dirname, 'public/bower')));
-  app.use(express.static(path.join(__dirname, 'public/dist')));
+  app.use(express.static(path.join(__dirname, 'public/app')));
   //app.use('/dist',express.static(path.join(__dirname, 'public/dist')));
 
   app.use('/api', apis);
