@@ -3,6 +3,32 @@
     var XMLHttpRequest = window.XMLHttpRequest;
     var sessionStorage = window.sessionStorage;
 
+    function clientSideRouter() {
+        route('/historyOfAndhra', 'historyOfAndhra', function () {
+            // first check for existing script file,
+            // if none found then load new 
+            var existingScriptFile = document.querySelectorAll('[src="components/history/ctrl.js"]');
+            if (existingScriptFile[0]) {
+                document.body.removeChild(existingScriptFile[0]);
+            }
+            var script = document.createElement('SCRIPT');
+            script.setAttribute('src', 'components/history/ctrl.js');
+            document.body.appendChild(script);
+        });
+        route('/historyOfSistlas', 'historyOfSistlas', function () {
+            // first check for existing script file,
+            // if none found then load new 
+            var existingScriptFile = document.querySelectorAll('[src="components/sistlas/ctrl.js"]');
+            if (existingScriptFile[0]) {
+                document.body.removeChild(existingScriptFile[0]);
+            }
+            var script = document.createElement('SCRIPT');
+            script.setAttribute('src', 'components/sistlas/ctrl.js');
+            document.body.appendChild(script);
+        });
+        return true;
+    }
+
     function loadI18n(){
         sessionStorage.clear();
 
@@ -15,6 +41,7 @@
                 sessionStorage.setItem('i18', xhr.responseText);
             }
         };
+
         xhr.send();
         return true;
     }
@@ -99,14 +126,14 @@
         var mainContent = Array.prototype.filter.call(mainContainer[0].childNodes, function(node){
             return (node.nodeName === 'ARTICLE' && node.className === 'main-content');
         });
-
         loadI18n();
         loadHeaderContent(mainHeader);
-        loadMainContent(mainContent);
+        // loadMainContent(mainContent);
         loadFooterContent(mainFooter);
 
         return true;
     }
+    clientSideRouter();
     init();
     /////////////////////////
     /////////////////////////

@@ -41,7 +41,7 @@
     <!-- Add your site or application content here -->
     <main class="container">
         <header class="header"></header>
-        <article class="main-content"></article>
+        <article class="main-content" id="view"></article>
         <footer class="footer"></footer>
     </main>
     <!--[if lt IE 9]>
@@ -49,12 +49,36 @@
     <script src="bower/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
+
+    <script src="scripts/routing.js"></script>
     <script src="scripts/app.js"></script>
+
+    <!-- history of andhra content -->
+    <script type="text/html" id="historyOfAndhra">
+        <section>
+            <div class="loading-dimensions" data-if="showSpinner">
+                <div class="whirly-loader">Loading…</div>
+            </div>
+            
+            <div id="history-content" data-if="!showSpinner">
+                <h2 class="center" data-bind="history.title"></h2>
+                <div data-bind="history.content"></div>
+            </div>
+        </section>
+    </script>
+
+    <!-- history of sistlas content -->
+    <script type="text/html" id="historyOfSistlas">
+        <section>
+            <div class="loading-dimensions" data-if="showSpinner">
+                <div class="whirly-loader">Loading…</div>
+            </div>
+            
+            <div id="sistlas-content" data-if="!showSpinner">
+                <h2 class="center" data-bind="sistlas.title"></h2>
+                <div data-bind="sistlas.content"></div>
+            </div>
+        </section>
+    </script>
 </body>
 </html>
-
-
-<!--<section>
-    <p class="pull-left" style="margin-left:35px">&copy; Sistlas 2015 | All rights reserved</p>
-    <p class="pull-right" style="margin-right:35px">Questions? <a href="mailto:sistlasfamily@gmail.com">Contact here</p>
-</section>-->
