@@ -187,10 +187,10 @@ label[for="fi"]:hover > span {
   text-align: center;
   opacity: 1;
 }
-.card-view .card-view-repeat {
+.card-view-repeat {
   margin-bottom: 10px;
 }
-.card-view .card-view-repeat a {
+.card-view-repeat a {
   color: #333333;
   padding: 0;
   border: 1px solid #333333;
@@ -203,7 +203,7 @@ label[for="fi"]:hover > span {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-.card-view .card-view-repeat a:hover {
+.card-view-repeat a:hover {
   text-decoration: none;
   color: #ffad33;
   border: 1px solid #ffad33;
@@ -213,14 +213,14 @@ label[for="fi"]:hover > span {
   cursor: pointer;
   opacity: 1;
 }
-.card-view .card-view-repeat a p {
+.card-view-repeat a p {
   margin: 0;
   padding: 5px;
   width: 100%;
   text-align: center;
   opacity: 1;
 }
-.card-view .card-view-repeat {
+.card-view-repeat {
   /*&:nth-child(odd){
       a{
         p{
@@ -236,49 +236,49 @@ label[for="fi"]:hover > span {
       }
     }*/
 }
-.card-view .card-view-repeat article {
+.card-view-repeat article {
   overflow: hidden;
   position: relative;
 }
-.card-view .card-view-repeat .leaf-tab {
+.card-view-repeat .leaf-tab {
   /*width: 25%;*/
   overflow: hidden;
   margin: auto;
   float: none;
 }
-.card-view .card-view-repeat .parent-leaf {
+.card-view-repeat .parent-leaf {
   position: static !important;
 }
-.card-view .card-view-repeat .parent-leaf svg {
+.card-view-repeat .parent-leaf svg {
   position: absolute;
   top: 35%;
 }
 @media only screen and (max-width: 767px) {
-  .card-view .card-view-repeat .parent-leaf svg {
+  .card-view-repeat .parent-leaf svg {
     left: 20%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .card-view .card-view-repeat .parent-leaf svg {
+  .card-view-repeat .parent-leaf svg {
     left: 23%;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1128px) {
-  .card-view .card-view-repeat .parent-leaf svg {
+  .card-view-repeat .parent-leaf svg {
     left: 25%;
   }
 }
 @media only screen and (min-width: 1129px) and (max-width: 1200px) {
-  .card-view .card-view-repeat .parent-leaf svg {
+  .card-view-repeat .parent-leaf svg {
     left: 23%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .card-view .card-view-repeat .parent-leaf svg {
+  .card-view-repeat .parent-leaf svg {
     left: 25%;
   }
 }
-.card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+.card-view-repeat .parent-leaf svg:nth-child(2) {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   -o-transform: scaleX(-1);
@@ -290,60 +290,60 @@ label[for="fi"]:hover > span {
   left: 68%;
 }
 @media only screen and (max-width: 767px) {
-  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+  .card-view-repeat .parent-leaf svg:nth-child(2) {
     left: 66%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+  .card-view-repeat .parent-leaf svg:nth-child(2) {
     left: 66%;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1128px) {
-  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+  .card-view-repeat .parent-leaf svg:nth-child(2) {
     left: 66%;
   }
 }
 @media only screen and (min-width: 1129px) and (max-width: 1200px) {
-  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+  .card-view-repeat .parent-leaf svg:nth-child(2) {
     left: 68%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .card-view .card-view-repeat .parent-leaf svg:nth-child(2) {
+  .card-view-repeat .parent-leaf svg:nth-child(2) {
     left: 68%;
   }
 }
-.card-view .card-view-repeat .treeChild {
+.card-view-repeat .treeChild {
   position: relative;
   border-top: 1px solid;
 }
 @media only screen and (max-width: 767px) {
-  .card-view .card-view-repeat .treeChild {
+  .card-view-repeat .treeChild {
     margin-top: 5px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .card-view .card-view-repeat .treeChild {
+  .card-view-repeat .treeChild {
     margin-top: 3px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1128px) {
-  .card-view .card-view-repeat .treeChild {
+  .card-view-repeat .treeChild {
     margin-top: 16px;
   }
 }
 @media only screen and (min-width: 1129px) and (max-width: 1200px) {
-  .card-view .card-view-repeat .treeChild {
+  .card-view-repeat .treeChild {
     margin-top: 16px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .card-view .card-view-repeat .treeChild {
+  .card-view-repeat .treeChild {
     margin-top: 16px;
   }
 }
-.card-view .card-view-repeat .treeChild .child-leafs {
+.card-view-repeat .treeChild .child-leafs {
   width: 20%;
   float: left;
   padding: 0 30px;
@@ -364,6 +364,7 @@ label[for="fi"]:hover > span {
 .footer {
   position: fixed;
   width: 100%;
+  left: 0;
   bottom: 0;
   background: white;
   opacity: 0.9;

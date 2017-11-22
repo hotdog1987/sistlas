@@ -1,38 +1,12 @@
 (function(window){
+    'use strict';
+
     var document = window.document;
-    var XMLHttpRequest = window.XMLHttpRequest;
-    var showSpinner = document.querySelectorAll('[data-if="showSpinner"]');
-    var showMainContent = document.querySelectorAll('[data-if="!showSpinner"]');
-
-    function loadContent(section, callback) {
-        var xhr = new XMLHttpRequest();
-
-        // show spinner and hide content before AJAX call
-        showSpinner[0].style.display = 'block';
-        showMainContent[0].style.display = 'none';
-
-        xhr.onreadystatechange = function() {
-            if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                if (typeof callback === 'function') {
-                    callback(JSON.parse(xhr.responseText));
-                }
-            }
-        };
-        xhr.open('GET', '/api/' + section, true);
-        if (section === 'culture') {
-            xhr.setRequestHeader('Content-Type', 'text/html');
-        } else {
-            xhr.setRequestHeader('Content-Type', 'application/json');
-        }
-        xhr.send();
-    }
-
+    window.sistlasApp = window.sistlasApp || {};
+    
     function loadSistlas() {
         var sistlasContentElem = document.getElementById('sistlas-content');
-        loadContent('sistlas', function(response){
-            // hide spinner after AJAX call
-            showSpinner[0].style.display = 'none';
-            showMainContent[0].style.display = 'block';
+        window.sistlasApp.loadContent('sistlas', function(response){
 
             var listContent = '';
             if (response[0] && response[0].para15) {
@@ -69,23 +43,7 @@
             '<p style="margin:20px 0">' + response[0].part16 + '</p>';
 
             if (sistlasContentElem && sistlasContentElem.childNodes) {
-                Array.prototype.forEach.call(sistlasContentElem.childNodes, function(childNode){
-                    if (childNode && childNode.attributes && childNode.attributes.getNamedItem("data-bind")) {
-
-                        switch(childNode.attributes.getNamedItem("data-bind").value) {
-                            case 'sistlas.content': {
-                                childNode.innerHTML = content;
-                            }
-                            break;
-                            
-                            case 'sistlas.title': {
-                                childNode.innerHTML = response[0].title;
-                            }
-                            break;
-                            default: {}
-                        }
-                    }
-                });
+                window.sistlasApp.mapContent(sistlasContentElem, response, content);
             }
         });
     }

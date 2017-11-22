@@ -26,6 +26,7 @@
     <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="stylesheets/vendor.min.css">
     <link rel="stylesheet" href="stylesheets/media.css">
     <link rel="stylesheet" href="stylesheets/whirly.css">
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -42,7 +43,16 @@
     <main class="container">
         <header class="header"></header>
         <article class="main-content" id="view"></article>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <section>
+                <p class="pull-left" style="margin-left:35px">
+                    <span>&copy; Sistlas 2015 | All rights reserved</span>
+                </p>
+                <p class="pull-right" style="margin-right:35px">
+                    <span>Questions? <a href="mailto:sistlasfamily@gmail.com">Contact here</a></span>
+                </p>
+            </section>
+        </footer>
     </main>
     <!--[if lt IE 9]>
     <script src="bower/es5-shim/es5-shim.js"></script>
@@ -51,6 +61,7 @@
     <!-- endbuild -->
 
     <script src="scripts/routing.js"></script>
+    <script src="scripts/clientSideRouting.js"></script>
     <script src="scripts/app.js"></script>
 
     <!-- history of andhra content -->
@@ -61,8 +72,8 @@
             </div>
             
             <div id="history-content" data-if="!showSpinner">
-                <h2 class="center" data-bind="history.title"></h2>
-                <div data-bind="history.content"></div>
+                <h2 class="center" data-bind="title"></h2>
+                <div data-bind="content"></div>
             </div>
         </section>
     </script>
@@ -75,8 +86,50 @@
             </div>
             
             <div id="sistlas-content" data-if="!showSpinner">
-                <h2 class="center" data-bind="sistlas.title"></h2>
-                <div data-bind="sistlas.content"></div>
+                <h2 class="center" data-bind="title"></h2>
+                <div data-bind="content"></div>
+            </div>
+        </section>
+    </script>
+
+    <!-- culture of sistlas content -->
+    <script type="text/html" id="cultureOfSistlas">
+        <section>
+            <div class="loading-dimensions" data-if="showSpinner">
+                <div class="whirly-loader">Loading…</div>
+            </div>
+            
+            <div id="culture-content" data-if="!showSpinner">
+                <h2 class="center" data-bind="title"></h2>
+                <div data-bind="content"></div>
+            </div>
+        </section>
+    </script>
+
+    <!-- honor content -->
+    <script type="text/html" id="honor">
+        <section>
+            <div class="loading-dimensions" data-if="showSpinner">
+                <div class="whirly-loader">Loading…</div>
+            </div>
+            
+            <div id="honor-content" data-if="!showSpinner">
+                <h2 class="center" data-bind="title"></h2>
+                <div data-bind="content"></div>
+            </div>
+        </section>
+    </script>
+
+    <!-- leafs content -->
+    <script type="text/html" id="leafs">
+        <section>
+            <div class="loading-dimensions" data-if="showSpinner">
+                <div class="whirly-loader">Loading…</div>
+            </div>
+            <div id="leafs-content" data-if="!showSpinner" class="card-view-repeat">
+                <div ui-view="treeParent" style="position:relative;"></div>
+                <div ui-view="treeChild" class="treeChild"></div>
+                <div ui-view="treeGrandChild" class="treeChild"></div>
             </div>
         </section>
     </script>
