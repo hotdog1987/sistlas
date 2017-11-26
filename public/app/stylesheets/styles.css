@@ -3,9 +3,8 @@
   src: url('../font/Roboto-Regular.ttf');
 }
 body {
-  background: #efefef;
+  background: #fff;
   margin: 0;
-  padding-top: 270px;
   font-family: Roboto;
 }
 
@@ -25,17 +24,6 @@ body {
   -o-transition: all 1500ms ease;
   transition: all 1500ms ease;
 }
-
-.main-nav {
-  position: fixed;
-  background: #efefef;
-  height: 48px;
-  z-index: 150;
-  margin-bottom: -80px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
-  width: 100%;
-  top: 200px;
-}
 .mainView {
   height: 900px;
   background-color: #efefef;
@@ -46,121 +34,9 @@ body {
 .max {
   height: 200px;
 }
-.minNav {
-  top: 80px;
-}
-.maxNav {
-  top: 200px;
-}
-/* NAVIGATION CSS */
-/******************/
-input[type=radio] {
-  display: none;
-}
-.cont {
-  width: inherit;
-  margin: 0 auto;
-  background: #efefef;
-  position: fixed;
-  height: 48px;
-}
-.cont label {
-  width: 20%;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  color: #333333;
-  float: left;
-  cursor: pointer;
-}
-@media only screen and (max-width: 767px) {
-  .cont label {
-    line-height: inherit;
-  }
-}
-.cont label span {
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #000;
-  transition: all 0.6s;
-}
-.cont input[type=radio]:checked + label {
-  color: #ffad33;
-  cursor: default;
-}
-.cont input[type=radio]:checked ~ div {
-  width: auto;
-}
-.cont input[type=radio]#f:checked ~ .border {
-  left: 0;
-  right: 80%;
-}
-.cont .border {
-  position: absolute;
-  height: 2px;
-  background-color: #ffad33;
-  bottom: 0;
-  left: 0;
-  width: 20%;
-  -webkit-transition: left 0.5s ease-out, right 0.4s ease;
-  -moz-transition: left 0.5s ease-out, right 0.4s ease;
-  -o-transition: left 0.5s ease-out, right 0.4s ease;
-  transition: left 0.5s ease-out, right 0.4s ease;
-}
-label[for="f"] > span {
-  left: 0;
-}
-label[for="s"] > span {
-  left: 20%;
-}
-label[for="t"] > span {
-  left: 40%;
-}
-label[for="fo"] > span {
-  left: 60%;
-}
-label[for="fi"] > span {
-  left: 80%;
-}
-label[for="f"]:hover > span {
-  width: 20%;
-}
-label[for="s"]:hover > span {
-  width: 20%;
-}
-label[for="t"]:hover > span {
-  width: 20%;
-}
-label[for="fo"]:hover > span {
-  width: 20%;
-}
-label[for="fi"]:hover > span {
-  width: 20%;
-}
-.cont input[type=radio]#f:checked ~ label[for="f"]:hover > span,
-.cont input[type=radio]#s:checked ~ label[for="s"]:hover > span,
-.cont input[type=radio]#t:checked ~ label[for="t"]:hover > span,
-.cont input[type=radio]#fo:checked ~ label[for="fo"]:hover > span,
-.cont input[type=radio]#fi:checked ~ label[for="fi"]:hover > span {
-  width: 0;
-}
-.cont input[type=radio]#s:checked ~ .border {
-  left: 20%;
-  right: 60%;
-}
-.cont input[type=radio]#t:checked ~ .border {
-  left: 40%;
-  right: 40%;
-}
-.cont input[type=radio]#fo:checked ~ .border {
-  left: 60%;
-  right: 20%;
-}
-.cont input[type=radio]#fi:checked ~ .border {
-  left: 80%;
-  right: 0;
+.main-content {
+  padding-top: 200px;
+  padding-bottom: 50px;
 }
 /* CSS FOR HISTORY PAGE */
 .center {
@@ -366,7 +242,7 @@ label[for="fi"]:hover > span {
   width: 100%;
   left: 0;
   bottom: 0;
-  background: white;
+  background: #fff;
   opacity: 0.9;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
